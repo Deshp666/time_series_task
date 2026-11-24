@@ -1,0 +1,12 @@
+.venv/
+.cache/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+lightning_logs/
+data/raw/*.zip
+artifacts/*/jobs/
+artifacts/full-*/
+artifacts/smoke-*/
+artifacts/latest_smoke.json

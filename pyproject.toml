@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bike-forecast-course"
+version = "0.1.0"
+description = "Reproducible hourly bike-demand forecasting study"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy>=1.26,<3", "pandas>=2.2,<3", "scipy>=1.12,<2",
+  "scikit-learn>=1.5,<2", "statsmodels>=0.14,<0.15",
+  "statsforecast>=2,<3", "mlforecast>=1,<2", "matplotlib>=3.9,<4",
+  "PyYAML>=6,<7", "holidays>=0.60,<1", "tabulate>=0.9,<1",
+  "nbformat>=5,<6", "nbclient>=0.10,<1", "ipykernel>=6,<8"
+]
+
+[project.optional-dependencies]
+dl = ["neuralforecast>=3,<4"]
+test = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+include = ["bike_forecast*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

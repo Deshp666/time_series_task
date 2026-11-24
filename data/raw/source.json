@@ -1,0 +1,11 @@
+{
+  "source": "https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset",
+  "download_url": "https://archive.ics.uci.edu/static/public/275/bike+sharing+dataset.zip",
+  "downloaded_at": "2026-09-14T05:27:10.006656+00:00",
+  "sha256": "b70182d0d0508e9abbb79306ce5c0cec34869000f8220175ac83d11dbe845401",
+  "license": "CC BY 4.0; attribute UCI and dataset authors",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "authors": "Hadi Fanaee-T, Joao Gama",
+  "doi": "10.24432/C5W894",
+  "teacher_approval": "not recorded"
+}
