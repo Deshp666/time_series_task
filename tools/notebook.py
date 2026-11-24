@@ -159,7 +159,14 @@ def build_notebook(profile):
                     display(pd.DataFrame(comparison).round(2))
                     for row in comparison:
                         h = row["Горизонт, ч"]
-                        show_figure(f"forecast_{row['Выбор по валидации']}_{h}.png")
+                        validation_leader = row["Выбор по валидации"]
+                        test_leader = row["Лидер на тесте"]
+                        display(Markdown(f"### Горизонт {h} часов"))
+                        display(Markdown(f"**Выбор по валидации** · {validation_leader}"))
+                        show_figure(f"forecast_{validation_leader}_{h}.png")
+                        if test_leader != validation_leader:
+                            display(Markdown(f"**Наименьший MAE на декабрьском тесте** · {test_leader}"))
+                            show_figure(f"forecast_{test_leader}_{h}.png")
             if (folder / "REPORT.md").is_file():
                 report = (folder / "REPORT.md").relative_to(root).as_posix()
                 display(Markdown(f"[Полный отчёт этого прогона]({report})"))
