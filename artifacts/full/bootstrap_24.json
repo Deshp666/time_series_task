@@ -1,0 +1,8 @@
+{
+  "leader": "NHITS",
+  "mean_loss_difference": -39.92677013079325,
+  "ci_low": -76.08362944920857,
+  "ci_high": -3.769910812377932,
+  "blocks": 4,
+  "repetitions": 1000
+}

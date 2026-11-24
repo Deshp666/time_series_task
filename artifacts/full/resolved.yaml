@@ -1,0 +1,133 @@
+seed: 42
+horizons:
+- 24
+- 168
+budget_seconds: 21600
+job_timeout_seconds: 600
+threads: 4
+splits:
+  validation:
+  - '2012-09-01'
+  - '2012-09-15'
+  - '2012-10-01'
+  - '2012-10-15'
+  calibration:
+  - '2012-11-01'
+  - '2012-11-08'
+  - '2012-11-15'
+  - '2012-11-22'
+  test:
+  - '2012-12-01'
+  - '2012-12-08'
+  - '2012-12-15'
+  - '2012-12-22'
+models:
+  SeasonalNaive:
+  - season_length: 168
+  ARIMA:
+  - season_length: 24
+    order:
+    - 1
+    - 1
+    - 1
+    seasonal_order:
+    - 1
+    - 0
+    - 0
+  - season_length: 168
+    order:
+    - 1
+    - 1
+    - 1
+    seasonal_order:
+    - 1
+    - 0
+    - 0
+  AutoARIMA:
+  - season_length: 24
+    max_p: 2
+    max_q: 2
+    max_P: 1
+    max_Q: 1
+    max_order: 4
+    nmodels: 20
+    stepwise: true
+    approximation: true
+  - season_length: 168
+    max_p: 2
+    max_q: 2
+    max_P: 1
+    max_Q: 1
+    max_order: 4
+    nmodels: 20
+    stepwise: true
+    approximation: true
+  ETS:
+  - season_length: 24
+    model: AAA
+  - season_length: 168
+    model: AAA
+  AutoETS:
+  - season_length: 24
+    model: ZZZ
+  - season_length: 168
+    model: ZZZ
+  Theta:
+  - season_length: 24
+  - season_length: 168
+  CES:
+  - season_length: 24
+  - season_length: 168
+  MSTL:
+  - season_length:
+    - 24
+    - 168
+  Ridge:
+  - alpha: 1.0
+  - alpha: 100.0
+  RandomForestRegressor:
+  - n_estimators: 100
+    max_depth: 12
+    min_samples_leaf: 2
+  - n_estimators: 200
+    max_depth: 20
+    min_samples_leaf: 4
+  HistGradientBoostingRegressor:
+  - max_iter: 150
+    max_leaf_nodes: 15
+    learning_rate: 0.05
+  - max_iter: 250
+    max_leaf_nodes: 31
+    learning_rate: 0.05
+  MLP:
+  - input_size: 168
+  - input_size: 336
+  LSTM:
+  - input_size: 168
+  - input_size: 336
+  NHITS:
+  - input_size: 168
+  - input_size: 336
+dl:
+  max_steps: 1000
+  early_stop_patience_steps: 5
+  val_check_steps: 50
+  learning_rate: 0.001
+  batch_size: 32
+  windows_batch_size: 128
+extensions:
+- name: no_calendar
+  calendar: false
+- name: historical_weather
+  weather: true
+- name: log1p
+  log1p: true
+- name: missing_1pct
+  missing: 0.01
+- name: missing_5pct
+  missing: 0.05
+- name: seed17
+  seed: 17
+- name: seed2026
+  seed: 2026
+profile: full

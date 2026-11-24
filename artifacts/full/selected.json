@@ -1,0 +1,144 @@
+{
+  "24": {
+    "SeasonalNaive": {
+      "season_length": 168
+    },
+    "ARIMA": {
+      "season_length": 168,
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        0
+      ]
+    },
+    "AutoARIMA": {
+      "season_length": 168,
+      "max_p": 2,
+      "max_q": 2,
+      "max_P": 1,
+      "max_Q": 1,
+      "max_order": 4,
+      "nmodels": 20,
+      "stepwise": true,
+      "approximation": true
+    },
+    "ETS": {
+      "season_length": 168,
+      "model": "AAA"
+    },
+    "AutoETS": {
+      "season_length": 168,
+      "model": "ZZZ"
+    },
+    "Theta": {
+      "season_length": 168
+    },
+    "CES": {
+      "season_length": 168
+    },
+    "MSTL": {
+      "season_length": [
+        24,
+        168
+      ]
+    },
+    "Ridge": {
+      "alpha": 100.0
+    },
+    "RandomForestRegressor": {
+      "n_estimators": 200,
+      "max_depth": 20,
+      "min_samples_leaf": 4
+    },
+    "HistGradientBoostingRegressor": {
+      "max_iter": 250,
+      "max_leaf_nodes": 31,
+      "learning_rate": 0.05
+    },
+    "MLP": {
+      "input_size": 168
+    },
+    "LSTM": {
+      "input_size": 336
+    },
+    "NHITS": {
+      "input_size": 336
+    }
+  },
+  "168": {
+    "SeasonalNaive": {
+      "season_length": 168
+    },
+    "ARIMA": {
+      "season_length": 168,
+      "order": [
+        1,
+        1,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        0
+      ]
+    },
+    "AutoARIMA": {
+      "season_length": 168,
+      "max_p": 2,
+      "max_q": 2,
+      "max_P": 1,
+      "max_Q": 1,
+      "max_order": 4,
+      "nmodels": 20,
+      "stepwise": true,
+      "approximation": true
+    },
+    "ETS": {
+      "season_length": 168,
+      "model": "AAA"
+    },
+    "AutoETS": {
+      "season_length": 168,
+      "model": "ZZZ"
+    },
+    "Theta": {
+      "season_length": 168
+    },
+    "CES": {
+      "season_length": 168
+    },
+    "MSTL": {
+      "season_length": [
+        24,
+        168
+      ]
+    },
+    "Ridge": {
+      "alpha": 100.0
+    },
+    "RandomForestRegressor": {
+      "n_estimators": 200,
+      "max_depth": 20,
+      "min_samples_leaf": 4
+    },
+    "HistGradientBoostingRegressor": {
+      "max_iter": 250,
+      "max_leaf_nodes": 31,
+      "learning_rate": 0.05
+    },
+    "MLP": {
+      "input_size": 168
+    },
+    "LSTM": {
+      "input_size": 336
+    },
+    "NHITS": {
+      "input_size": 336
+    }
+  }
+}

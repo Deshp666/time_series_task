@@ -1,0 +1,7 @@
+{
+  "torch": "2.11.0+cu128",
+  "cuda_available": true,
+  "cuda_version": "12.8",
+  "device": "NVIDIA GeForce RTX 4080 SUPER",
+  "vram_bytes": 17170956288
+}

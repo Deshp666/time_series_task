@@ -1,0 +1,8 @@
+{
+  "leader": "LSTM",
+  "mean_loss_difference": -6.564803940502564,
+  "ci_low": -17.438251173852308,
+  "ci_high": 2.8848559647897045,
+  "blocks": 28,
+  "repetitions": 1000
+}

@@ -27,3 +27,8 @@ python tools/notebook.py --profile full --execute
 ```
 
 Команда запуска использует сохранённую почасовую таблицу. При необходимости команда `python -m bike_forecast download` повторно загружает исходный архив и готовит данные. Ноутбук отображает сохранённые результаты.
+
+
+## Итоговые результаты
+
+[Отчёт](../artifacts/full/REPORT.md) · [Ноутбук](../study_full.ipynb) · [Тестовая выборка](../artifacts/full/test_data.csv) · [Таблица метрик](../artifacts/full/summary.csv)
